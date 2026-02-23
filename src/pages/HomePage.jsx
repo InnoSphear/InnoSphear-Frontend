@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
 import SectionTitle from "../components/ui/SectionTitle";
@@ -152,23 +152,22 @@ const HomePage = () => {
             description="We move fast, stay collaborative, and sweat the details that make your product feel inevitable."
           />
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {testimonials.map((testimonial, idx) => (
-              <MotionReveal key={`${testimonial.name}-${idx}`}>
-                <Card className="h-full">
-                  <p className="text-sm text-slate-300">
-                    "{testimonial.quote}"
+            <MotionReveal>
+              <Card className="h-full">
+                <p className="text-sm text-slate-300">
+                  As CEO, my vision is not just to build a company, but to
+                  build solutions that create real impact, drive innovation, and
+                  empower businesses to grow beyond limits.
+                </p>
+
+                <div className="mt-6">
+                  <p className="text-sm font-semibold text-white">
+                    Ujjwal Karmakar
                   </p>
-                  <div className="mt-6">
-                    <p className="text-sm font-semibold text-white">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-xs text-slate-400">
-                      {testimonial.title}
-                    </p>
-                  </div>
-                </Card>
-              </MotionReveal>
-            ))}
+                  <p className="text-xs text-slate-400">CEO</p>
+                </div>
+              </Card>
+            </MotionReveal>
           </div>
         </div>
       </section>
