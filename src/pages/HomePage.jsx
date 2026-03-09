@@ -1,3 +1,4 @@
+﻿import { Helmet } from "react-helmet-async";
 import React from "react";
 import Button from "../components/ui/Button";
 import Card from "../components/ui/Card";
@@ -11,6 +12,17 @@ import usePricing from "../api/usePricing";
 import useCaseStudies from "../api/useCaseStudies";
 
 const HomePage = () => {
+  <Helmet>
+    <title>InnoSphear - AI Development & Web Solutions</title>
+    <meta
+      name="description"
+      content="InnoSphear builds AI powered apps, MERN stack platforms and modern web solutions."
+    />
+    <meta
+      name="keywords"
+      content="AI development, MERN stack developer, web development India"
+    />
+  </Helmet>;
   const { settings } = useSettings();
   const { services } = useServices({ active: true, limit: 6 });
   const { pricing } = usePricing({ active: true, limit: 3 });
@@ -155,8 +167,8 @@ const HomePage = () => {
             <MotionReveal>
               <Card className="h-full">
                 <p className="text-sm text-slate-300">
-                  As CEO, my vision is not just to build a company, but to
-                  build solutions that create real impact, drive innovation, and
+                  As CEO, my vision is not just to build a company, but to build
+                  solutions that create real impact, drive innovation, and
                   empower businesses to grow beyond limits.
                 </p>
 
